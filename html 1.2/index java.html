@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Concepts</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    const outputDiv = document.getElementById("output");
+
+    // String methods
+    const str = "Hello, World!";
+    outputDiv.innerHTML += `String Length: ${str.length}<br>`;
+    outputDiv.innerHTML += `Uppercase: ${str.toUpperCase()}<br>`;
+    outputDiv.innerHTML += `Index of 'World': ${str.indexOf("World")}<br>`;
+    outputDiv.innerHTML += `Slice: ${str.slice(0, 5)}<br>`;
+    outputDiv.innerHTML += `Replace: ${str.replace("Hello", "Hi")}<br><br>`;
+
+    // Number methods
+    const num = 42.75;
+    outputDiv.innerHTML += `Number to Fixed: ${num.toFixed(1)}<br>`;
+    outputDiv.innerHTML += `Number to String: ${num.toString()}<br>`;
+    outputDiv.innerHTML += `Is Integer: ${Number.isInteger(num)}<br>`;
+    outputDiv.innerHTML += `Rounded: ${Math.round(num)}<br>`;
+    outputDiv.innerHTML += `Square Root: ${Math.sqrt(num)}<br><br>`;
+
+    // Array methods
+    const arr = [1, 2, 3, 4, 5];
+    outputDiv.innerHTML += `Array Length: ${arr.length}<br>`;
+    outputDiv.innerHTML += `Joined Array: ${arr.join(" - ")}<br>`;
+    outputDiv.innerHTML += `Index of 3: ${arr.indexOf(3)}<br>`;
+    outputDiv.innerHTML += `Sliced Array: ${arr.slice(2, 4)}<br>`;
+    outputDiv.innerHTML += `Concatenated Array: ${arr.concat([6, 7])}<br><br>`;
+
+    // Date methods
+    const now = new Date();
+    outputDiv.innerHTML += `Year: ${now.getFullYear()}<br>`;
+    outputDiv.innerHTML += `Month: ${now.getMonth()}<br>`;
+    outputDiv.innerHTML += `Day: ${now.getDate()}<br>`;
+    outputDiv.innerHTML += `Hour: ${now.getHours()}<br>`;
+    outputDiv.innerHTML += `Minute: ${now.getMinutes()}<br><br>`;
+
+    // Function Methods
+    function greet(name) {
+      return `Hello, ${name}!`;
+    }
+    const add = function(a, b) {
+      return a + b;
+    }
+
+    outputDiv.innerHTML += `${greet("Alice")}<br>`;
+    outputDiv.innerHTML += `Sum: ${add(3, 5)}<br>`;
+  </script>
+</body>
+</html>
